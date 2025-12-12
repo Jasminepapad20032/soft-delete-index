@@ -1,4 +1,5 @@
 Soft Delete – Digital Decay  
+https://jasminepapad20032.github.io/soft-delete-index/
 
 1. Project Idea
 
