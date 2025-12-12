@@ -1,0 +1,177 @@
+/* style for index page */
+/* global reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Base body styling */
+/* Only the general stuff here. The glitch GIF goes on .home-bg. */
+body {
+  font-family: "Georgia", "Times New Roman", serif;   /* serif font feels “old web” */
+  color: #fdfdfd;                                      /* light text for dark bg */
+  background-color: #050508;                           /* fallback if GIF fails */
+  line-height: 1.5;                                 /* simple readable spacing */
+}
+
+
+/* page backgroung (Gif) */
+/* The GIF is only for the index page. Learned background-size from:
+   https://www.w3schools.com/css/css3_pr_background-size.php */
+
+/* Image source (found asset):
+   https://giphy.com/gifs/glitch-rainbow-art-oy7wGVaohJYe4 */
+.home-bg {
+  background-image: url("../gifs/glitch.gif"); /* going up from /styles to root */
+  background-repeat: no-repeat;                /* no tiling */
+  background-size: cover;                      /* fill the screen nicely */
+  background-position: center;                 /* centre important part */
+  background-attachment: fixed;                /* stays still behind content */
+
+}
+
+
+/* Header layout */
+#site-header {
+  max-width: 960px;              /* consistent width across pages */
+  margin: 30px auto 10px;        /* auto centres it */
+  padding: 10px 20px;            /* little inner spacing */
+  background: rgba(0, 0, 0, 0.55); /* soft overlay so the GIF doesn’t overpower */
+}
+
+/* clamp() helps this title resize smoothly. Reference:
+   https://www.w3schools.com/cssref/func_clamp.php */
+#site-header h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  letter-spacing: 0.08em;         /* gentle spacing */
+
+}
+
+#site-header .tagline {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+}
+
+
+/* Main content box  */
+/* This is like the single-column pattern we followed in class. */
+main {
+max-width: 960px;
+  margin: 40px auto 80px;
+  padding: 30px 30px 40px;      /* inner spacing so text doesnt hug edges */
+
+  /* semi-transparent backing to help text readability */
+background: rgba(0, 0, 0, 0.68);
+
+
+  /* faint outline + soft glow (box-shadow syntax from W3Schools):
+     https://www.w3schools.com/css/css3_shadows_box.asp */
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+}
+
+
+/* Intro paragraph */
+.intro-block {
+  margin-bottom: 2rem;     /* simple spacing before list */
+}
+
+.intro-block p {
+  font-size: 1.05rem;
+}
+
+
+/* Navigation list */
+/* removing bullet points and adding a left border */
+#link-list ul {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+/* each “file” link gets its own <li> with padding and an accent border */
+#link-list li {
+  margin-bottom: 1.9rem;
+  padding: 0.8rem 0.6rem;
+
+  border-left: 3px solid rgba(255, 255, 255, 0.45);
+
+}
+
+
+/* Link styling  */
+/* Early-web style: bigger anf underlined, bright colour */
+.big-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2a5bff;
+  text-decoration: underline;
+}
+
+/* Fake link (for the broken entry) */
+.fake-link {
+  cursor: default;     /* so it doesn’t show a clickable pointer */
+}
+
+/* note under each filename */
+.link-note {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* broken one looks a bit weaker and dotted */
+.broken {
+  opacity: 0.8;
+  border-left-style: dotted;
+}
+
+
+/* Simple glitch hover effect  */
+/* Animation syntax from:
+   https://www.w3schools.com/css/css3_animations.asp
+   text-shadow reference:
+   https://www.w3schools.com/cssref/css3_pr_text-shadow.php */
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: none;              /* normal text */
+  }
+  50% {
+    opacity: 0.6;
+    text-shadow:
+      -2px 0 rgba(0, 255, 255, 0.9),  /* cyan offset */
+      2px 0 rgba(255, 0, 255, 0.9);   /* magenta offset */
+  }
+}
+
+/* only flickers when hovering */
+.big-link:hover {
+  animation: flicker 0.35s steps(2, end) 1; /* steps() gives a choppy flicker */
+}
+
+
+/* Footer note inside main box */
+.footer-note {
+margin-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 1.2rem;
+  font-size: 0.98rem;
+}
+
+
+/* tiny footer under everything */
+ footer {
+  max-width: 960px;
+
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.small-print {
+  font-size: 0.8rem;
+  color: rgba(240, 240, 240, 0.8);
+
+}
+

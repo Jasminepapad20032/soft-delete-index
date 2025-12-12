@@ -1,0 +1,120 @@
+
+/* global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* page base styling */
+body {
+  background: #020408;                 /* almost-black terminal backdrop */
+  color: #ccf5d5;                      /* soft mint text (easy to read) */
+  font-family: "IBM Plex Mono", monospace; /* keeps the “console” feeling */
+  padding: 40px 20px 80px 20px;        /* same spacing pattern as memory page */
+}
+
+
+/* header and main width */
+header,
+main {
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+
+/* header text */
+header h1 {
+  font-size: 2.5rem;
+  text-transform: lowercase;      /* fits the stripped-down aesthetic */
+  margin-bottom: 0.4rem;
+}
+
+header .intro {
+  margin-bottom: 1.4rem;
+  line-height: 1.5;               /* slightly loose for readability */
+}
+
+
+/* navigation */
+nav {
+  margin-bottom: 2.2rem;
+  font-size: 0.9rem;
+}
+
+nav a {
+  color: #9fffd0;                 /* mint link to stay in theme */
+  text-decoration: none;          
+} 
+
+
+nav a:hover {
+  text-decoration: underline;     /* simple hover feedback */
+}
+
+nav span {
+  color: #507f6b;                 /* muted bullet separator */
+  margin: 0 4px;
+
+}
+
+
+/* terminal block */
+/* Border and shadow method learned from W3Schools:
+   https://www.w3schools.com/css/css3_shadows_box.asp */
+#terminal {
+  background: #030712;             /* “console window” feel */
+  border: 1px solid #1a3a28;       /* subtle greenish edge */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  padding: 18px 20px 22px 20px;
+
+  min-height: 260px;               /* keeps the block from collapsing */
+  margin-bottom: 2.5rem;
+
+
+  font-size: 0.95rem;
+  line-height: 1.8;                /* spaced lines look more terminal-like */
+}
+
+
+/* faded lines that look “soft-deleted” */
+.ghost {
+  color: #4b7a60;                  /* greener + dimmer */
+}
+
+/* extra subtle text */
+.faint {
+
+  opacity: 0.6;
+}
+
+
+/* blinking cursor animation */
+/* Animation syntax checked from:
+   https://www.w3schools.com/css/css3_animations.asp */
+#cursor {
+  display: inline-block;           /* needed so animation applies correctly */
+  animation: blink 1s steps(2, start) infinite;
+}
+
+/* blinking effect: opacity toggles from visible to invisible */
+@keyframes blink {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+
+}
+
+
+/* bottom note/ poem */
+#note {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+#note .poem {
+  margin-top: 1rem;                /* space above poem */
+  font-size: 0.95rem;
+}

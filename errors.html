@@ -1,0 +1,102 @@
+
+<!-- “Error Poems” page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+   <title>Error Poems — when the system tries to be polite</title>
+
+
+  <!-- viewport tag I used on all pages for responsive layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- linking external stylesheet  -->
+  <link rel="stylesheet" href="styles/errors.css">
+
+</head>
+
+<body>
+
+  <header>
+    <!-- lowercase heading to match the “terminal” aesthetic -->
+    <h1>error poems</h1>
+
+    <!-- short intro like the memory/gallery pages -->
+    <p class="intro">
+      the system keeps apologising in small grey boxes.  
+      this page listens to them.
+    </p>
+
+    <!-- tiny navigation row (same format everywhere for consistency again) -->
+    <nav>
+      <a href="index.html">index</a><span>•</span>
+      <a href="gallery.html">gif graveyard</a><span>•</span>
+      <a href="memory.html">browser memories</a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- “terminal” style block for listing error messages -->
+    <!-- Using <section> to group the console-like outputs semantically -->
+    <section id="terminal">
+      <p>&gt; file not found</p>
+
+
+      <!-- ghost lines = softer colour, looks “half deleted” -->
+      <p class="ghost">&gt; user not found</p>
+
+
+      <p>&gt; connection timed out</p>
+      <p>&gt; please check your feelings and try again</p>
+
+      <p class="ghost">&gt; cached version may be out of date</p>
+
+      <p>&gt; 410 gone</p>
+
+      <p>
+        &gt; this resource has been permanently removed  
+        <span class="faint">(but we kept a copy just in case)</span>
+      </p>
+
+      <!-- fake blinking cursor, animated in CSS -->
+      <p id="cursor">&gt; _</p>
+
+    </section>
+
+    <!-- tiny bottom note with a micro-poem -->
+    <section id="note">
+      <p>every error message is secretly a haiku about loss:</p>
+
+      <p class="poem">
+        server not responding<br>
+        something you needed<br>
+        logged out forever
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

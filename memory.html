@@ -1,0 +1,118 @@
+
+
+
+<!-- “Browser Memories” page of my Soft Delete project. -->
+   
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>Browser Memories – Soft Delete</title>
+
+  <!-- same responsive meta pattern I used across all pages -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+
+  <!-- linking external CSS file from the styles folder -->
+<link rel="stylesheet" href="styles/memory.css">
+
+</head>
+
+<body>
+
+  <header>
+    <!-- page title -->
+    <h1>Browser Memories</h1>
+
+    <!-- small intro paragraph -->
+    <p class="intro">
+      fragments of pages i closed without reading, still cached somewhere
+      between here and the server.
+    </p>
+
+    <!-- simple horizontal nav  -->
+    <nav>
+      <a href="index.html">index</a>
+      <span>•</span>
+      <a href="gallery.html">gif graveyard</a>
+      <span>•</span>
+      <a href="errors.html">error poems</a>
+
+</nav>
+  </header>
+
+
+  <!-- main board that holds the skull and the memory cards -->
+  <main id="board">
+
+
+    <!-- this wrapper lets me position the skull image behind everything -->
+    <!-- Image source: https://www.typcarroll.com/digital-decay -->
+    <div class="skull-wrapper">
+      <img
+        src="images/skull.png"
+        alt="Glitched skull fading behind browser memories."
+        class="skull-ghost">
+    </div>
+
+    <!-- flexbox grid for the memory “sticky note” cards -->
+    <section class="memory-grid">
+
+      <!-- each memory-card is an <article> so the structure stays semantic -->
+
+      <article class="memory-card card-a">
+        <h2>OPEN TAB / 03:17</h2>
+
+        <p>
+          “how to remember a<br>
+          website you forgot to<br>
+          bookmark” i never<br>
+          finished the article.<br>
+          the irony is not subtle.
+        </p>
+      </article>
+
+
+      <article class="memory-card card-b">
+        <h2>SOFT DELETED COMMENT</h2>
+        <p>
+          “this account has been<br>
+          removed by the user.” the<br>
+          replies are still there,<br>
+          orbiting an empty centre.
+        </p>
+      </article>
+
+      <article class="memory-card card-c">
+        <h2>UNFINISHED FORM</h2>
+        <p>
+          your browser would like<br>
+          to restore the previous<br>
+          session. the form still<br>
+          thinks you are<br>
+          mid-sentence.
+        </p>
+
+      </article>
+
+
+
+      <article class="memory-card card-d">
+        <h2>AUTO-SAVED DRAFT</h2>
+        <p>
+          every 5 seconds, a new<br>
+          copy. no one ever pressed<br>
+          “publish”. there are more<br>
+          versions of this text than<br>
+          people who will read it.
+        </p>
+      </article>
+
+</section>
+</main>
+
+</body>
+</html>
+
